@@ -11,4 +11,7 @@ object Versions {
     const val junit = "4.12"
     const val test_runner = "1.2.0"
     const val espresso = "3.2.0"
+    const val okhttp = "4.2.0"
+    const val retrofit = "2.6.1"
+    const val moshi = "1.8.0"
 }
