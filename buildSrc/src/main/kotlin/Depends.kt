@@ -27,10 +27,33 @@ object Depends {
 
     object Retrofit {
         val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        val converterMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+        val adapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     }
 
     object Moshi {
         val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     }
+
+    object Dagger {
+        val dagger = "com.google.dagger:dagger:${Versions.dagger}"
+        val daggerAnnotation = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+        val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
+        val androidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
+        val daggerAndroidAnnotation = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    }
+
+    object Groupie {
+        val core = "com.xwray:groupie:${Versions.groupie}"
+        val binding = "com.xwray:groupie-databinding:${Versions.groupie}"
+    }
+
+    object LifeCycle {
+        val runtime = "android.arch.lifecycle:runtime:${Versions.archLifecycle}"
+        val extensions = "android.arch.lifecycle:extensions:${Versions.archLifecycle}"
+        val reactivestreams = "android.arch.lifecycle:reactivestreams:${Versions.archLifecycle}"
+    }
+
+
 
 }

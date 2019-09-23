@@ -1,7 +1,17 @@
 plugins {
-    `kotlin-dsl`
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
-repositories {
-    jcenter()
+android {
+    compileSdkVersion(Versions.compileSdkVersion)
+    defaultConfig {
+        minSdkVersion(Versions.minSdkVersion)
+    }
+}
+
+dependencies {
+    api(Depends.ktx)
+    api(Depends.kotlin.stdlib)
 }

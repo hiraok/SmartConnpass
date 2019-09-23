@@ -1,6 +1,6 @@
-package response
+package com.hiraok.smartcompass.response
 
-import Event
+import com.hiraok.smartcompass.Event
 import com.squareup.moshi.Json
 
 data class EventResponse(

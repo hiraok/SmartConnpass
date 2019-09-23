@@ -1,3 +1,5 @@
+package com.hiraok.smartcompass
+
 data class Event(
     val eventUrl: String,
     val eventType: String,

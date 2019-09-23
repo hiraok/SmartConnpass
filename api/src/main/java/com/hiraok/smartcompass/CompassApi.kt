@@ -1,4 +1,6 @@
-import response.EventResponse
+package com.hiraok.smartcompass
+
+import com.hiraok.smartcompass.response.EventResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

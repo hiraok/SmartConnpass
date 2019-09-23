@@ -24,10 +24,22 @@ android {
 }
 
 dependencies {
+    implementation(project(":api"))
+    implementation(project(":model"))
     implementation(Depends.kotlin.stdlib)
     implementation(Depends.Support.appcompat)
     implementation(Depends.ktx)
     implementation(Depends.Layout.constraint)
+    implementation(Depends.Dagger.dagger)
+    kapt(Depends.Dagger.daggerAnnotation)
+    kapt(Depends.Dagger.androidSupport)
+    implementation(Depends.Dagger.daggerAndroid)
+    kapt(Depends.Dagger.daggerAndroidAnnotation)
+    implementation(Depends.LifeCycle.extensions)
+    implementation(Depends.LifeCycle.reactivestreams)
+    implementation(Depends.LifeCycle.runtime)
+    implementation(Depends.Groupie.core)
+    implementation(Depends.Groupie.binding)
     testImplementation(Depends.Test.junit)
     androidTestImplementation(Depends.Test.runner)
     androidTestImplementation(Depends.Test.espresso)

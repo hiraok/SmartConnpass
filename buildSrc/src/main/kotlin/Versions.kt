@@ -14,4 +14,7 @@ object Versions {
     const val okhttp = "4.2.0"
     const val retrofit = "2.6.1"
     const val moshi = "1.8.0"
+    const val dagger = "2.24"
+    const val archLifecycle = "1.1.0"
+    const val groupie = "2.0.3"
 }
