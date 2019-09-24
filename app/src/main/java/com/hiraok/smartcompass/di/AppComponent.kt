@@ -12,7 +12,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidInjectionModule::class,
-        ApiComponentModule::class
+        ApiComponentModule::class,
+        RepositoryModule::class
     ]
 )
 interface AppComponent : AndroidInjector<SmartCompassApplication> {
