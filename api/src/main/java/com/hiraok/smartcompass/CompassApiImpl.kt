@@ -7,35 +7,10 @@ import javax.inject.Inject
 class CompassApiImpl @Inject constructor(
     private val retrofit: Retrofit
 ) : CompassApi {
-    override suspend fun getEvent(
-        eventId: String,
-        keyword: String,
-        keywordOr: String,
-        ym: Int,
-        ymd: Int,
-        nickName: String,
-        ownerNickName: String,
-        seriesId: Int,
-        start: Int,
-        order: Int,
-        count: Int,
-        format: String
+    override suspend fun getEventAll(
     ): EventResponse {
         val retrofit = retrofit.create(CompassApi::class.java)
-        return retrofit.getEvent(
-            eventId = eventId,
-            keyword = keyword,
-            keywordOr = keywordOr,
-            ym = ym,
-            ymd = ymd,
-            nickName = nickName,
-            ownerNickName = ownerNickName,
-            seriesId = seriesId,
-            start = start,
-            order = order,
-            count = count,
-            format = format
-        )
+        return retrofit.getEventAll()
     }
 
 }

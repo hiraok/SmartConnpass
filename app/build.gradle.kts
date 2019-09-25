@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-android-extensions")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -21,6 +22,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    dataBinding {
+        isEnabled = true
+    }
 }
 
 dependencies {
@@ -34,6 +39,8 @@ dependencies {
     implementation(Depends.ktx_viewModel)
     implementation(Depends.ktx_reactiveStream)
     implementation(Depends.ktx_fragment)
+    implementation(Depends.ktx_navigation)
+    implementation(Depends.ktx_ui)
     implementation(Depends.Layout.constraint)
     implementation(Depends.Dagger.dagger)
     kapt(Depends.Dagger.daggerAnnotation)

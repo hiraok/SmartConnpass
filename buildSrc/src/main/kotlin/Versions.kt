@@ -10,6 +10,7 @@ object Versions {
     const val kotlin_extension_viewmodel = "2.1.0-beta01"
     const val kotlin_extension_reactivestream = "2.0.0"
     const val kotlin_extension_frgament = "1.0.0"
+    const val nav_version = "2.1.0"
     const val constraint_layout = "1.1.3"
     const val junit = "4.12"
     const val test_runner = "1.2.0"

@@ -14,6 +14,8 @@ object Depends {
     val ktx_viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.kotlin_extension_viewmodel}"
     val ktx_reactiveStream = "androidx.lifecycle:lifecycle-reactivestreams-ktx:${Versions.kotlin_extension_reactivestream}"
     val ktx_fragment = "androidx.fragment:fragment-ktx:${Versions.kotlin_extension_frgament}"
+    val ktx_navigation = "androidx.navigation:navigation-fragment-ktx:${Versions.nav_version}"
+    val ktx_ui = "androidx.navigation:navigation-ui-ktx:${Versions.nav_version}"
 
     object Layout {
         val constraint = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
