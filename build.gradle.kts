@@ -3,7 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+        maven("https://oss.sonatype.org/content/repositories/snapshots/")
     }
     dependencies {
         classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.nav_version}")

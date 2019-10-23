@@ -1,4 +1,4 @@
-package com.hiraok.smartcompass
+package com.hiraok.smartcompass.ui
 
 
 import android.os.Bundle
@@ -7,21 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.hiraok.smartcompass.databinding.FragmentEventListBinding
+import com.hiraok.smartcompass.R
+import com.hiraok.smartcompass.databinding.FragmentMyPageBinding
 
 /**
  * A simple [Fragment] subclass.
  */
-class EventListFragment : Fragment() {
+class MyPageFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentEventListBinding>(
+        val binding = DataBindingUtil.inflate<FragmentMyPageBinding>(
             inflater,
-            R.layout.fragment_event_list,
+            R.layout.fragment_my_page,
             container,
             false
         )

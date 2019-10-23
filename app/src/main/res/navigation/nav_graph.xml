@@ -7,13 +7,13 @@
 
     <fragment
             android:id="@+id/eventList"
-            android:name="com.hiraok.smartcompass.EventListFragment"
-            android:label="fragment_event_list"
+            android:name="com.hiraok.smartcompass.ui.EventListFragment"
+            android:label="イベント一覧"
             tools:layout="@layout/fragment_event_list" />
 
     <fragment
             android:id="@+id/myPage"
-            android:name="com.hiraok.smartcompass.MyPageFragment"
-            android:label="fragment_my_page"
+            android:name="com.hiraok.smartcompass.ui.MyPageFragment"
+            android:label="マイページ"
             tools:layout="@layout/fragment_my_page" />
 </navigation>

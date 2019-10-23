@@ -1,5 +1,7 @@
 package com.hiraok.smartcompass.di
 
+import com.facebook.flipper.plugins.network.FlipperOkhttpInterceptor
+import com.facebook.flipper.plugins.network.NetworkFlipperPlugin
 import com.hiraok.smartcompass.CompassApi
 import com.hiraok.smartcompass.CompassApiImpl
 import com.squareup.moshi.Moshi
@@ -22,9 +24,12 @@ internal abstract class ApiModule {
         @JvmStatic
         @Singleton
         @Provides
-        fun provideOkHttp(): OkHttpClient =
-            OkHttpClient().newBuilder()
+        fun provideOkHttp(): OkHttpClient {
+            val networkFlipperPlugin = NetworkFlipperPlugin()
+            return OkHttpClient().newBuilder()
+                .addNetworkInterceptor(FlipperOkhttpInterceptor(networkFlipperPlugin))
                 .build()
+        }
 
         @JvmStatic
         @Singleton
@@ -32,7 +37,7 @@ internal abstract class ApiModule {
         fun provideCompassApiRetrofit(okHttpClient: OkHttpClient): Retrofit {
             return Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("https://connpass.com/api/v1")
+                .baseUrl("https://connpass.com/")
                 .addConverterFactory(MoshiConverterFactory.create(Moshi.Builder().build()))
                 .build()
         }

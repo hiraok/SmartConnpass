@@ -1,16 +1,12 @@
 package com.hiraok.smartcompass
 
-import com.hiraok.smartcompass.response.EventResponse
+import com.hiraok.smartcompass.response.EventListResponse
 import retrofit2.Retrofit
 import javax.inject.Inject
 
 class CompassApiImpl @Inject constructor(
-    private val retrofit: Retrofit
+    retrofit: Retrofit
 ) : CompassApi {
-    override suspend fun getEventAll(
-    ): EventResponse {
-        val retrofit = retrofit.create(CompassApi::class.java)
-        return retrofit.getEventAll()
-    }
-
+    private val client = retrofit.create(CompassApi::class.java)
+    override suspend fun getEventAll(): EventListResponse = client.getEventAll()
 }

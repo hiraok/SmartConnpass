@@ -21,5 +21,6 @@ dependencies {
     implementation(Depends.Retrofit.converterMoshi)
     implementation(Depends.Retrofit.adapterRxJava2)
     implementation(Depends.Dagger.dagger)
-    kapt(Depends.Dagger.daggerAnnotation)
+    kapt(Depends.Dagger.daggerCompiler)
+    debugImplementation(Depends.Flipper.network)
 }

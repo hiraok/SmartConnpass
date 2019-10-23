@@ -20,6 +20,10 @@ object Versions {
     const val moshi = "1.8.0"
     const val dagger = "2.24"
     const val archLifecycle = "1.1.0"
-    const val groupie = "2.0.3"
+    const val groupie = "2.6.0"
     const val coroutines = "1.3.1"
+    const val flipper = "0.26.0"
+    const val soloader = "0.5.1"
+    const val jsoup = "1.12.1"
+    const val paging = "2.1.0-rc01"
 }

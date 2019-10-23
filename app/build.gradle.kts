@@ -19,7 +19,10 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -41,15 +44,25 @@ dependencies {
     implementation(Depends.ktx_fragment)
     implementation(Depends.ktx_navigation)
     implementation(Depends.ktx_ui)
+    implementation(Depends.ktx_paging)
     implementation(Depends.Layout.constraint)
+
     implementation(Depends.Dagger.dagger)
-    kapt(Depends.Dagger.daggerAnnotation)
-    kapt(Depends.Dagger.androidSupport)
+    implementation(Depends.Dagger.daggerAndroidSupport)
     implementation(Depends.Dagger.daggerAndroid)
-    kapt(Depends.Dagger.daggerAndroidAnnotation)
+    kapt(Depends.Dagger.daggerAndroidProcessor)
+    kapt(Depends.Dagger.daggerCompiler)
+
     implementation(Depends.Groupie.core)
     implementation(Depends.Groupie.binding)
+    implementation(Depends.Groupie.ktx)
+    implementation(Depends.Misc.jsoup)
+
     testImplementation(Depends.Test.junit)
     androidTestImplementation(Depends.Test.runner)
     androidTestImplementation(Depends.Test.espresso)
+
+    debugImplementation(Depends.Flipper.core)
+    debugImplementation(Depends.Flipper.soloader)
+    releaseImplementation(Depends.Flipper.noop)
 }
