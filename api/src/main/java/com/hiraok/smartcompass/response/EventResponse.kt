@@ -16,7 +16,7 @@ data class EventResponse(
     @field:Json(name = "event_id") val eventId: Int,
     @field:Json(name = "lon") val lon: String?,
     @field:Json(name = "waiting") val waiting: Int,
-    @field:Json(name = "limit") val limit: Int,
+    @field:Json(name = "limit") val limit: Int?,
     @field:Json(name = "owner_id") val ownerId: Int,
     @field:Json(name = "owner_display_name") val ownerDisplayName: String,
     @field:Json(name = "description") val description: String,

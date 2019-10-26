@@ -13,7 +13,7 @@ data class Event(
     val eventId: Int,
     val lon: String?,
     val waiting: Int,
-    val limit: Int,
+    val limit: Int?,
     val ownerId: Int,
     val ownerDisplayName: String,
     val description: String,
