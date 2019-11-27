@@ -9,7 +9,7 @@ plugins {
 android {
     compileSdkVersion(Versions.compileSdkVersion)
     defaultConfig {
-        applicationId = "com.hiraok.smartcompass"
+        applicationId = "com.hiraok.smartconnpass"
         minSdkVersion(Versions.minSdkVersion)
         targetSdkVersion(Versions.targetSdkVersion)
         versionCode = 1
