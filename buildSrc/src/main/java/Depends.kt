@@ -1,38 +1,45 @@
 object Depends {
-    object kotlin {
-        val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin_version}"
-        val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-        val coroutineAndroid =
+    object Kotlin {
+        val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlinVersion}"
+        val coroutines =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        val coroutinesAndroid =
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     }
 
     object Support {
-        val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+        val appcompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
 
     }
 
-    val ktx = "androidx.core:core-ktx:${Versions.kotlin_extension}"
-    val ktx_viewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.kotlin_extension_viewmodel}"
-    val ktx_reactiveStream =
-        "androidx.lifecycle:lifecycle-reactivestreams-ktx:${Versions.kotlin_extension_reactivestream}"
-    val ktx_fragment = "androidx.fragment:fragment-ktx:${Versions.kotlin_extension_frgament}"
-    val ktx_navigation = "androidx.navigation:navigation-fragment-ktx:${Versions.nav_version}"
-    val ktx_ui = "androidx.navigation:navigation-ui-ktx:${Versions.nav_version}"
-    val ktx_paging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
+    val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
+    val ktxCollection = "androidx.collection:collection-ktx:${Versions.ktxCollection}"
+    val ktxViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.ktxLifeCycle}"
+    val ktxReactiveStream =
+        "androidx.lifecycle:lifecycle-reactivestreams-ktx:${Versions.ktxLifeCycle}"
+    val ktxLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.ktxLifeCycle}"
+    val ktxRunTime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.ktxLifeCycle}"
+    val ktxFragment = "androidx.fragment:fragment-ktx:${Versions.ktxFragment}"
+    val ktxPaging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
+    val ktxNavigation = "androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}"
+    val ktxUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
+    val ktxPalette = "androidx.palette:palette-ktx:${Versions.ktxPalette}"
+    val ktxWorkManager = "androidx.work:work-runtime-ktx:${Versions.ktxWorkManager}"
 
     object Layout {
-        val constraint = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
+        val constraint =
+            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     }
 
     object Test {
         val junit = "junit:junit:${Versions.junit}"
-        val runner = "androidx.test:runner:${Versions.test_runner}"
+        val runner = "androidx.test:runner:${Versions.testRunner}"
         val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     }
 
-    object Okhttp {
-        val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    object OkHttp {
+        val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
 
     }
 
@@ -50,7 +57,8 @@ object Depends {
         val dagger = "com.google.dagger:dagger:${Versions.dagger}"
         val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
         val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
-        val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
+        val daggerAndroidSupport =
+            "com.google.dagger:dagger-android-support:${Versions.dagger}"
         val daggerAndroidProcessor =
             "com.google.dagger:dagger-android-processor:${Versions.dagger}"
     }

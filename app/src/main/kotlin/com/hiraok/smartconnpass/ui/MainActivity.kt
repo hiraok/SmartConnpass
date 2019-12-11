@@ -3,6 +3,7 @@ package com.hiraok.smartconnpass.ui
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.hiraok.smartconnpass.R
 import com.hiraok.smartconnpass.databinding.ActivityMainBinding
 import dagger.android.support.DaggerAppCompatActivity

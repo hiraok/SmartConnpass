@@ -1,50 +1,46 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-kapt")
-    id("kotlin-android-extensions")
+    kotlin("android")
+    kotlin("kapt")
+    kotlin("android.extensions")
     id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
-    compileSdkVersion(Versions.compileSdkVersion)
+    compileSdkVersion(Versions.androidCompileSdkVersion)
     defaultConfig {
-        applicationId = "com.hiraok.smartconnpass"
         minSdkVersion(Versions.minSdkVersion)
+        applicationId = "com.hiraok.smartconnpass"
         targetSdkVersion(Versions.targetSdkVersion)
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-
     dataBinding {
         isEnabled = true
     }
+    sourceSets["main"].java.srcDir("src/main/kotlin")
 }
 
 dependencies {
     implementation(project(":api"))
     implementation(project(":model"))
-    implementation(Depends.kotlin.stdlib)
-    implementation(Depends.kotlin.coroutines)
-    implementation(Depends.kotlin.coroutineAndroid)
+    implementation(Depends.Kotlin.coroutines)
+    implementation(Depends.Kotlin.stdlib)
+    implementation(Depends.Kotlin.coroutinesAndroid)
     implementation(Depends.Support.appcompat)
-    implementation(Depends.ktx)
-    implementation(Depends.ktx_viewModel)
-    implementation(Depends.ktx_reactiveStream)
-    implementation(Depends.ktx_fragment)
-    implementation(Depends.ktx_navigation)
-    implementation(Depends.ktx_ui)
-    implementation(Depends.ktx_paging)
+    implementation(Depends.ktxCore)
+    implementation(Depends.ktxCollection)
+    implementation(Depends.ktxRunTime)
+    implementation(Depends.ktxWorkManager)
+    implementation(Depends.ktxPalette)
+    implementation(Depends.ktxViewModel)
+    implementation(Depends.ktxReactiveStream)
+    implementation(Depends.ktxFragment)
+    implementation(Depends.ktxNavigation)
+    implementation(Depends.ktxUi)
+    implementation(Depends.ktxPaging)
+    implementation(Depends.ktxLiveData)
     implementation(Depends.Layout.constraint)
 
     implementation(Depends.Dagger.dagger)

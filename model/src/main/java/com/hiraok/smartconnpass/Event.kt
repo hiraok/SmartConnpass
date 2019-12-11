@@ -17,9 +17,9 @@ data class Event(
     val ownerId: Int,
     val ownerDisplayName: String,
     val description: String,
-    val address: String,
+    val address: String?,
     val catch: String,
     val accepted: Int,
     val endedAt: String,
-    val place: String
+    val place: String?
 )

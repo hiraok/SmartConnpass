@@ -1,15 +1,15 @@
 package com.hiraok.smartconnpass.paging
 
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import androidx.paging.PageKeyedDataSource
 import com.hiraok.smartconnpass.Event
-import com.hiraok.smartconnpass.EventAllUseCase
+import com.hiraok.smartconnpass.GetAllEventUseCase
 import com.xwray.groupie.Item
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 
 class PageKeyedEventDataSource<T : Item<*>>(
-    private val useCase: EventAllUseCase,
+    private val lifecycleOwner: LifecycleOwner,
+    private val useCase: GetAllEventUseCase,
     private val converter: (Event) -> T
 ) : PageKeyedDataSource<Int, T>() {
 
@@ -37,12 +37,10 @@ class PageKeyedEventDataSource<T : Item<*>>(
     ) {
 
         var next = 0
-        GlobalScope.launch {
-            useCase.execute().collect {
-                callback(it, next)
-                next = page + 1
-            }
-        }
+        useCase.execute().observe(lifecycleOwner, Observer {
+            callback(it, next)
+        })
+        next = page + 10
 
     }
 }

@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class EventViewModel @Inject constructor(
-    private val eventAllUseCase: EventAllUseCase
+    private val getAllEventUseCase: GetAllEventUseCase
 ) : ViewModel() {
 
     private val eventData = MutableLiveData<List<Event>>()

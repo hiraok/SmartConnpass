@@ -8,5 +8,5 @@ class CompassApiImpl @Inject constructor(
     retrofit: Retrofit
 ) : CompassApi {
     private val client = retrofit.create(CompassApi::class.java)
-    override suspend fun getEventAll(): EventListResponse = client.getEventAll()
+    override suspend fun getEventAll(count: Int): EventListResponse = client.getEventAll()
 }

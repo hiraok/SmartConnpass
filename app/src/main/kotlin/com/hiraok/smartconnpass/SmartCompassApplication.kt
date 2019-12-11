@@ -17,7 +17,7 @@ class SmartCompassApplication : DaggerApplication() {
         super.onCreate()
         SoLoader.init(this, false)
 
-        if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
+        if (com.hiraok.smartconnpass.BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
             val client = AndroidFlipperClient.getInstance(this)
             client.addPlugin(InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()))
             client.start()

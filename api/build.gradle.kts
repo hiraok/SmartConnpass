@@ -1,3 +1,5 @@
+import Versions.minSdkVersion
+
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -5,7 +7,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Versions.compileSdkVersion)
+    compileSdkVersion(Versions.androidCompileSdkVersion)
     defaultConfig {
         minSdkVersion(Versions.minSdkVersion)
     }
@@ -13,9 +15,11 @@ android {
 
 dependencies {
     implementation(project(":model"))
-    implementation(Depends.ktx)
-    implementation(Depends.kotlin.stdlib)
-    implementation(Depends.Okhttp.okhttp)
+    implementation(Depends.ktxCore)
+    implementation(Depends.Kotlin.coroutines)
+    implementation(Depends.Kotlin.coroutinesAndroid)
+    implementation(Depends.Kotlin.stdlib)
+    implementation(Depends.OkHttp.okHttp)
     implementation(Depends.Retrofit.retrofit)
     implementation(Depends.Moshi.moshi)
     implementation(Depends.Retrofit.converterMoshi)

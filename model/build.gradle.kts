@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Versions.compileSdkVersion)
+    compileSdkVersion(Versions.androidCompileSdkVersion)
     defaultConfig {
         minSdkVersion(Versions.minSdkVersion)
     }
 }
 
 dependencies {
-    api(Depends.ktx)
-    api(Depends.kotlin.stdlib)
+    api(Depends.ktxCore)
+    api(Depends.Kotlin.stdlib)
 }

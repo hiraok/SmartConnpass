@@ -3,13 +3,19 @@ package com.hiraok.smartconnpass.data.repository
 import com.hiraok.smartconnpass.CompassApi
 import com.hiraok.smartconnpass.Event
 import com.hiraok.smartconnpass.response.EventResponse
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class EventRepository @Inject constructor(
     private val compassApi: CompassApi
 ) {
 
-    suspend fun getEventAll(): List<Event> = compassApi.getEventAll().events.map { it.toDomain() }
+    suspend fun getAllEvent(): Flow<List<Event>> = flow {
+        emit(compassApi.getEventAll().events.map {
+            it.toDomain()
+        })
+    }
 
     private fun EventResponse.toDomain(): Event {
         return Event(

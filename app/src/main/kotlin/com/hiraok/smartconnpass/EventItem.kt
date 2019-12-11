@@ -5,9 +5,9 @@ import com.xwray.groupie.databinding.BindableItem
 import org.jsoup.Jsoup
 
 class EventItem(
-    private val event: Event
+    private val event: com.hiraok.smartconnpass.Event
 ) : BindableItem<EventItemBinding>() {
-    override fun getLayout(): Int = R.layout.event_item
+    override fun getLayout(): Int = com.hiraok.smartconnpass.R.layout.event_item
 
     override fun bind(viewBinding: EventItemBinding, position: Int) {
         viewBinding.apply {
